@@ -7,9 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-/**
- * Created by Jvck on 2018/3/13.
- */
+
 public class ProducerConsumerInJava {
 
 
