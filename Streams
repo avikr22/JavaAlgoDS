@@ -1,0 +1,19 @@
+Add All integers -- int easySum = IntStream.range(0, 100).sum();---------- Arrays.stream(numbers).sum();//numbers is array here
+List<String> empsOver40Age = newEmps.stream().filter(x -> x.getAge() > 40).sorted(personComparator).map(personReport).collect(Collectors.toList----
+Function <Person, String> personReport = (a) -> { return a.getLastName() + ", " + a.getFirstName() + ": " + a.getAge() + " years old.";};--------
+Missing number -- IntStream.rangeClosed(2, 10).sum() - Arrays.stream(a).sum();-----
+Sorting -- playerList.stream().sorted(Comparator.comparing(PlayerStats::getPlayerLastName).thenComparing(PlayerStats::getPlayerFirstName)).collect(Collectors.toList());-----
+sort by age reverse order --  users.stream().sorted(Comparator.comparingInt(User::getAge)).reversed().collect(Collectors.toList());------
+evenNumbersList = stream.filter(i -> i%2 == 0).collect(Collectors.toList());-------
+memberNames.stream().filter((s) -> s.startsWith("A")).forEach(System.out::println);----
+memberNames.stream().filter((s) -> s.startsWith("A")).map(String::toUpperCase).forEach(System.out::println);----
+memberNames.stream().sorted().map(String::toUpperCase).forEach(System.out::println);-----
+List<String> memNamesInUppercase = memberNames.stream().sorted().map(String::toUpperCase).collect(Collectors.toList());-----
+totalMatched = memberNames.stream().filter((s) -> s.startsWith("A")).count();----
+boolean matched = memberNames.stream().anyMatch((s) -> s.startsWith("A")); -----
+String firstMatchedName = memberNames.stream().filter((s) -> s.startsWith("L")).findFirst().get(); -----
+Stream<String> words = Arrays.asList("A", "B", "C", "D").stream();
+joinedString = words.collect(Collectors.joining(",", "{", "}"));  //{A,B,C,D}
+joinedString = words.collect(Collectors.joining(","));    //A,B,C,D
+String joinedString = words.collect(Collectors.joining());    //ABCD -----
+myList.stream().filter(s -> s.startsWith("c")).map(String::toUpperCase).sorted().forEach(System.out::println);
